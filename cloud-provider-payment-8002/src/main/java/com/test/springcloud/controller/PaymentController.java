@@ -1,11 +1,11 @@
 package com.test.springcloud.controller;
 
-import com.test.springcloud.service.PaymentService;
+import com.test.springcloud.entities.CommonResult;
+import com.test.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import com.test.springcloud.entities.CommonResult;
-import com.test.springcloud.entities.Payment;
+import com.test.springcloud.service.PaymentService;
 
 import javax.annotation.Resource;
 
