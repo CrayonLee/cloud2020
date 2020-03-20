@@ -11,6 +11,7 @@ import com.test.springcloud.entities.Payment;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author lzh
@@ -62,6 +63,16 @@ public class PaymentController {
         }
 
         return discoveryClient;
+    }
+
+    @GetMapping("/payment/feign/timeout")
+    public String timeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return serverPort;
     }
 
 
